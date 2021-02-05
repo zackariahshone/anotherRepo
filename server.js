@@ -4,7 +4,7 @@ const path = require('path')
 const router = express.Router();
 
 app.get('/', (req, res)=>{
-    res.sendFile(path.join(__dirname, './index.html'))
+    res.send('home test server')
 });
 
 app.use(express.static('index.html'))
