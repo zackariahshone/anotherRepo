@@ -3,32 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- boot strap set up/dependencies -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-    <title>Resume Tracker</title>
+    <link rel="stylesheet" href="../assets/style/display.css">
+    <title>Document</title>
 </head>
 <body>
     <div class="container">
+        <div class="jumbotron">
+            <div class="row">
 
-        
-            
-            <div class="jumbotron">
-                <h1 class="display-3">Resume Tracker</h1>
-                <p class="lead">Keep track of all the jobs you have applied to</p>
-                <hr class="my-2">
-                <p>You can add a possition that you have applied to </p>
-                <p>or see all of your previously applied possitions.</p>
-                <p class="lead">
-                    <a class="btn btn-success btn-lg" href="/addapp" role="button">Add An Application</a>
-                    <a class="btn btn-primary btn-lg" href="/allapps" role="button">View Tracked Applications</a>
-                </p>
+                <div class="col">
+                    <h1>Add Resume to Track</h1>
+                </div>
             </div>
-        
+            <div class="row">
+               <a href="/"> <button type="submit" class="btn btn-primary mr-5">Home</button></a>
+               <a href="/addapp"> <button type="submit" class="btn btn-primary">Track New Application</button></a>
+            </div>
+        </div>
     </div>
 
-</body>
 
-</html>
+        <div class="container">
+            <div class="row" id = 'appRow'>
+
+              
+            </div>
+        </div>
+    </body>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="../js/display.js"></script>
+    </html>

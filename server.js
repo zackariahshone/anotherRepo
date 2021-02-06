@@ -2,10 +2,9 @@ const express = require('express');
 const app = express();
 const path = require('path')
 const router = express.Router();
+const routes = require('./routes/htmlRoutes.js')
 
-app.get('/', (req, res)=>{
-    res.sendFile(path.join(__dirname, './public/html/index.html'));
-});
+app.use(routes)
 
 app.use(express.static('public'))
 
