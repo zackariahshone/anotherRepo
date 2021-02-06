@@ -17,7 +17,7 @@ $(document).ready(function () {
             'jobReq':jobReq.value,
             'contact':contact.value
         }
-        console.log(jobInformation);
+        console.log(`$ Job details from front end: ${jobInformation}`);
         $.ajax({
             type: "POST",
             url: "/appData",

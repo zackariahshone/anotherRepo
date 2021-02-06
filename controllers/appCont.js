@@ -10,7 +10,7 @@ module.exports = {
         })
     },
     create: (req, res) =>{
-        console.log(req.body);
+        console.log('logging req.body: ', req.body);
         db.applicationInfos.create({
             AppName:req.body.business,
             RecrutorName: req.body.jobTitle,
