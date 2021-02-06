@@ -1,11 +1,17 @@
 const express = require('express');
 const app = express();
-const path = require('path')
+const path = require('path');
 const router = express.Router();
-const routes = require('./routes/htmlRoutes.js')
+const htmlRoutes = require('./routes/htmlRoutes.js');
+// const appRoutes = require ('./routes/')
+const db = require('./models');
+const port = process.env.PORT || 8000;
 
-app.use(routes)
+app.use(htmlRoutes);
 
-app.use(express.static('public'))
+app.use(express.static('public'));
 
-app.listen(process.env.PORT || 8000, ()=>console.log('listening on 8000'))
+
+db.sequelize.sync().then(()=>{
+    app.listen(port, ()=>console.log('listening on 8000'));
+});
